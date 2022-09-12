@@ -5,10 +5,7 @@
         <environment id = "development">
             <transactionManager type = "JDBC"/>
             <dataSource type = "POOLED">
-                <property name = "driver" value = "com.mysql.jdbc.Driver"/>
-                <property name = "url" value = "jdbc:KKDemo_Version1://localhost:3306"/>
-                <property name = "username" value = "root"/>
-                <property name = "password" value = "xhkbxkdzt32"/>
+                
             </dataSource>
         </environment>
     </environments>
