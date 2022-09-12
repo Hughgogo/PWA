@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "hughgogo-litfire",
+    "litfire": "hughgogo-litfire"
+  },
+  "targets": {}
+}

@@ -1,0 +1,8 @@
+runtime: java17
+env: standard
+
+handlers:
+  - url: /*
+    script: none
+
+instance_class: F4

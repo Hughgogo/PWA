@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="../static/manifest.json">
+    <link rel="stylesheet" href="../static/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/mobileScript.js"></script>
+    <title>KK</title>
+</head>
+<body>
+<div class="wholeContainer">
+    <div class="mainViewPortContainer">
+        <div class="mainHeader">
+            <div class="userContainer">
+                <div class="userAccount">
+                    <img src="../static/images/home_white_24dp.svg">
+                </div>
+            </div>
+            <div class="pageInfoContainer">
+                <div class="caption" id="pageHeaderCaption">
+                    TO-DO
+                </div>
+            </div>
+            <div class="functionContainer">
+                <div class="functionBar">
+
+                </div>
+            </div>
+        </div>
+        <div class="mainContainer">
+            <div class="reminderListContainer">
+                <div class="reminderList" id="reminderList">
+
+                </div>
+            </div>
+        </div>
+        <div class="mainFunctionBar">
+            <div class="mainFunctionBarButton">
+                <div class="caption">New</div>
+            </div>
+        </div>
+    </div>
+    <div class="mainReminderWholeContainer">
+        <div class="mainReminderMask">
+        </div>
+        <div class="mainReminderDetailContainer">
+            <div class="captionContainer">
+                <div class="caption">
+
+                </div>
+            </div>
+            <div class="detailTimeContainer">
+                <div class="setTime">
+                </div>
+            </div>
+            <div class="detailContentContainer">
+                <div class="contentCaptionContainer">
+                    <div class="caption">
+                        Note
+                    </div>
+                </div>
+                <div class="noteContainer">
+                    <div class="note">
+                    </div>
+                </div>
+            </div>
+            <div class="detailContactContainer">
+                <div class="contactIconContainer">
+                    <img>
+                </div>
+                <div class="contactInfoContainer">
+                    <div class="caption">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="addReminderWholeContainer">
+        <div class="addReminderHeader">
+            <div class="addReminderHeaderClose">
+                <img src='../static/images/arrow_back_white_24dp.svg' id='addBackToPrimary'>
+            </div>
+        </div>
+        <div class="addReminderDetailContainer">
+            <div class="detailCaptionContainer">
+                <div class="titleInputContainer">
+                    <div class="titleContainer">
+                        <div class="title">
+                            Caption
+                        </div>
+                    </div>
+                    <input type="text" placeholder="New To-GO" id="reminder-caption-input">
+                </div>
+            </div>
+            <div class="detailFolderContainer">
+                <div class="toggleTitleInputContainer">
+                    <div class="titleContainer">
+                        <div class="title">
+                            Detail
+                        </div>
+                    </div>
+                    <div class="toggleButton">
+                    </div>
+                </div>
+            </div>
+            <div class="detailToggleContainer">
+                <div class="detailTextContainer">
+                    <div class="titleInputContainer">
+                        <div class="titleContainer">
+                            <div class="title">
+                                Note
+                            </div>
+                        </div>
+                        <input type="text" placeholder="Enter additional information" id="reminder-note-input">
+                    </div>
+                </div>
+                <div class="detailURLContainer">
+                    <div class="titleInputContainer">
+                        <div class="titleContainer">
+                            <div class="title">
+                                URL
+                            </div>
+                        </div>
+                        <input type="text" placeholder="Enter resource URL" id="reminder-url-input">
+                    </div>
+                </div>
+            </div>
+            <div class="detailTimeContainer">
+                <div class="dateTitleInputContainer">
+                    <div class="titleContainer">
+                        <div class="title">
+                            Date
+                        </div>
+                    </div>
+                    <input type="datetime-local" class="dateInput" id="reminder-date-input">
+                </div>
+            </div>
+            <div class="detailTargetContainer">
+                <div class="titleInputContainer">
+                    <div class="titleContainer">
+                        <div class="title">
+                            Target
+                        </div>
+                    </div>
+                    <input type="text" placeholder="Target">
+                </div>
+                <div class="targetSelectionContainer">
+                    <div class="selectionBarContainer">
+                        <div class="selectionBar" id="targetSelectionList">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="addReminderDetailFooterContainer">
+                <div class="buttonContainer">
+                    <div class="addButton">
+                        <div>
+                            GO!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainUserInfoWholeContainer">
+        <div class="mainUserInfoMask">
+
+        </div>
+        <div class="mainUserInfoDetailContainer">
+            <div class="headerContainer">
+                <div class="iconContainer">
+                    <img id="userInfoHeaderAvatar">
+                </div>
+                <div class="captionContainer">
+                    <div class="caption">
+                        User Info
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-list-container">
+                <div class="sidebar-list-item" id="sidebar-list-userProfile">
+                    <div class="icon-container">
+                        <img src="../static/images/account_circle.svg">
+                    </div>
+                    <div class="caption-container">
+                        <p>Profile</p>
+                    </div>
+                </div>
+                <div class="sidebar-list-item" id="sidebar-list-archive">
+                    <div class="icon-container">
+                        <img src="../static/images/archive_white_24dp.svg">
+                    </div>
+                    <div class="caption-container">
+                        <p>Archive</p>
+                    </div>
+                </div>
+                <div class="sidebar-list-item" id="sidebar-list-sent">
+                    <div class="icon-container">
+                        <img src="../static/images/send_and_archive_white_24dp.svg">
+                    </div>
+                    <div class="caption-container">
+                        <p>Sent</p>
+                    </div>
+                </div>
+                <div class="sidebar-list-item" id="sidebar-list-Friends">
+                    <div class="icon-container">
+                        <img src="../static/images/people_white_24dp.svg">
+                    </div>
+                    <div class="caption-container">
+                        <p>Friends</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footerContainer">
+                <div class="captionContainer">
+                    <div class="caption" id="Lit-Fire">
+                        Lit Fire
+                    </div>
+                </div>
+                <div class="iconContainer">
+                    <img src="../static/images/launcher-icon-2x.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="userInfoWholeContainer">
+        <div class="userInfoMask">
+        </div>
+        <div class="DetailContainer">
+            <div class="itemContainer">
+                <div class="itemPreview" id="usernameContainer">
+                    <div class="captionContainer">
+                        <div class="caption">
+                            Username
+                        </div>
+                    </div>
+                    <div class="contentContainer">
+                        <div class="content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="itemContainer">
+                <div class="itemPreview" id="emailContainer">
+                    <div class="captionContainer">
+                        <div class="caption">
+                            E-mail
+                        </div>
+                    </div>
+                    <div class="contentContainer">
+                        <div class="content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="friendInfoWholeContainer">
+        <div class="friendInfoMask">
+        </div>
+        <div class="DetailContainer">
+            <div class="invitationContainer">
+                <div class="invitationList" id="invitationList">
+
+                </div>
+            </div>
+            <div class="addContainer">
+                <div class="emailInputContainer">
+                    <input type="text" placeholder="E-mail" id="add-invitation-input">
+                </div>
+                <div class="addNewFriendContainer">
+                    <div class="buttonContainer">
+                        <div class="addButton" id="add-friend-button">
+                            <div>
+                                Add Friend
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-messaging.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDq1-bpABkmBX9ufNS__U-u7TWhMrcLc3Q",
+        authDomain: "hughgogo-litfire.firebaseapp.com",
+        projectId: "hughgogo-litfire",
+        storageBucket: "hughgogo-litfire.appspot.com",
+        messagingSenderId: "1081841794712",
+        appId: "1:1081841794712:web:a1bee5a25b322f61959aed",
+        measurementId: "G-WHR8GKTKEZ"
+    };
+    const PUBLIC_KEY = "BDGZr6CGTp9mM0CoRCzWimtVH84DqpK25vLW9ZX0aOTjzulUAopmNuvwX6p5zo11jB-6KP-9WBlLTD1W6ZklpXg";
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+        try {
+            const registration =  await navigator.serviceWorker.register('../static/service-worker.js');
+            if (registration.installing) {
+                console.log('Service worker installing');
+            } else if (registration.waiting) {
+                console.log('Service worker installed');
+            } else if (registration.active) {
+                console.log('Service worker active');
+            }
+        } catch (error) {
+            console.error(`Registration failed with ${error}`);
+        }
+    }
+    await new Promise(r => setTimeout(r, 1000));
+    navigator.serviceWorker.getRegistration('../static/service-worker.js').then(function (registration) {
+        const messaging = getMessaging();
+        getToken(messaging, { serviceWorkerRegistration: registration, vapidKey: PUBLIC_KEY, }).then((currentToken) => {
+            if (currentToken) {
+                $.ajax({
+                    method: 'POST',
+                    contentType: "application/json",
+                    url: "/messaging/register/",
+                    async:false,
+                    crossDomain:true,
+                    data:JSON.stringify({
+                        messagingToken: currentToken
+                    }),
+                    xhrFields: {
+                        withCredentials: true,
+                    },
+                });
+            } else {
+                // Show permission request UI
+                console.log('No registration token available. Request permission to generate one.');
+            }
+        }).catch((err) => {
+            console.log('An error occurred while retrieving token. ', err);
+        });
+        console.log("fireBase register success");
+    });
+
+
+</script>
+</html>
